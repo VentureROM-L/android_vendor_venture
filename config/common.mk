@@ -33,38 +33,8 @@ PRODUCT_COPY_FILES += \
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/bin/sysinit:system/bin/sysinit \
-    vendor/du/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/du/prebuilt/etc/init.d/00check:system/etc/init.d/00check \
-    vendor/du/prebuilt/etc/init.d/01zipalign:system/etc/init.d/01zipalign \
-    vendor/du/prebuilt/etc/init.d/02sysctl:system/etc/init.d/02sysctl \
-    vendor/du/prebuilt/etc/init.d/03firstboot:system/etc/init.d/03firstboot \
-    vendor/du/prebuilt/etc/init.d/05freemem:system/etc/init.d/05freemem \
-    vendor/du/prebuilt/etc/init.d/06removecache:system/etc/init.d/06removecache \
-    vendor/du/prebuilt/etc/init.d/07fixperms:system/etc/init.d/07fixperms \
-    vendor/du/prebuilt/etc/init.d/09cron:system/etc/init.d/09cron \
-    vendor/du/prebuilt/etc/init.d/10sdboost:system/etc/init.d/10sdboost \
-    vendor/du/prebuilt/etc/init.d/11battery:system/etc/init.d/11battery \
-    vendor/du/prebuilt/etc/init.d/12touch:system/etc/init.d/12touch \
-    vendor/du/prebuilt/etc/init.d/13minfree:system/etc/init.d/13minfree \
-    vendor/du/prebuilt/etc/init.d/14gpurender:system/etc/init.d/14gpurender \
-    vendor/du/prebuilt/etc/init.d/15sleepers:system/etc/init.d/15sleepers \
-    vendor/du/prebuilt/etc/init.d/16journalism:system/etc/init.d/16journalism \
-    vendor/du/prebuilt/etc/init.d/17sqlite3:system/etc/init.d/17sqlite3 \
-    vendor/du/prebuilt/etc/init.d/18wifisleep:system/etc/init.d/18wifisleep \
-    vendor/du/prebuilt/etc/init.d/19iostats:system/etc/init.d/19iostats \
-    vendor/du/prebuilt/etc/init.d/20setrenice:system/etc/init.d/20setrenice \
-    vendor/du/prebuilt/etc/init.d/21tweaks:system/etc/init.d/21tweaks \
-    vendor/du/prebuilt/etc/init.d/24speedy_modified:system/etc/init.d/24speedy_modified \
-    vendor/du/prebuilt/etc/init.d/25loopy_smoothness_tweak:system/etc/init.d/25loopy_smoothness_tweak \
-    vendor/du/prebuilt/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
-    vendor/du/prebuilt/etc/helpers.sh:system/etc/helpers.sh \
-    vendor/du/prebuilt/etc/sysctl.conf:system/etc/sysctl.conf \
-    vendor/du/prebuilt/etc/init.d.cfg:system/etc/init.d.cfg
-
-# userinit support
-PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/du/prebuilt/etc/00banner:system/etc/init.d/00banner \
+    vendor/du/prebuilt/bin/sysinit:system/bin/sysinit
 
 # Init script file with DU extras
 PRODUCT_COPY_FILES += \
@@ -87,20 +57,12 @@ PRODUCT_COPY_FILES += \
 # Add our overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/du/overlay/common
 
-# T-Mobile theme engine
-include vendor/du/config/themes_common.mk
-
 # SU Support
 PRODUCT_COPY_FILES += \
     vendor/du/prebuilt/bin/su:system/xbin/daemonsu \
     vendor/du/prebuilt/bin/su:system/xbin/su \
-    vendor/du/prebuilt/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
+    vendor/du/prebuilt/etc/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
     vendor/du/prebuilt/apk/Superuser.apk:system/app/Superuser.apk
-
-# CM Hardware Abstraction Framework
-PRODUCT_PACKAGES += \
-    org.cyanogenmod.hardware \
-    org.cyanogenmod.hardware.xml
 
 # HFM Files
 PRODUCT_COPY_FILES += \
@@ -108,8 +70,8 @@ PRODUCT_COPY_FILES += \
     vendor/du/prebuilt/etc/hosts.og:system/etc/hosts.og
 
 # Versioning System
-ANDROID_VERSION = 4.4.4
-DU_VERSION = v8.2
+ANDROID_VERSION = 5.0.0
+DU_VERSION = v9.0
 
 ifndef DU_BUILD_TYPE
     DU_BUILD_TYPE := UNOFFICIAL

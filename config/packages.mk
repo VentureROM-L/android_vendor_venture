@@ -7,21 +7,6 @@ PRODUCT_PACKAGES += \
 	SoundRecorder \
 	Basic
 
-# Additional apps
-PRODUCT_PACKAGES += \
-	Apollo \
-	DashClock \
-	DSPManager \
-	DU_about \
-        DU_changelog \
-        DU_notepad \
-        DU_walls \
-	libcyanogen-dsp \
-	audio_effects.conf \
-	MonthCalendarWidget \
-        OmniSwitch \
-        Terminal
-
 PRODUCT_PACKAGES += \
 	CellBroadcastReceiver
 
@@ -35,12 +20,4 @@ PRODUCT_PACKAGES += \
 	vim \
 	nano \
 	htop \
-	powertop \
-	lsof \
-	mount.exfat \
-	fsck.exfat \
-	mkfs.exfat \
-        mkfs.f2fs \
-        fsck.f2fs \
-        fibmap.f2fs
-
+	powertop
