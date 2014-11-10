@@ -78,10 +78,10 @@ ifndef DU_BUILD_TYPE
     PLATFORM_VERSION_CODENAME := UNOFFICIAL
 endif
 
-# Set all versions
 DU_VERSION := DU_$(ANDROID_VERSION)_$(shell date -u +%Y%m%d-%H%M).$(DU_VERSION)-$(DU_BUILD_TYPE)
-DU_MOD_VERSION := DU_$(ANDROID_VERSION)_$(shell date -u +%Y%m%d-%H%M).$(DU_VERSION)-$(DU_BUILD_TYPE)
+DU_MOD_VERSION := $(DU_BUILD_TYPE)-v9.0
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     ro.du.version=$(DU_VERSION) \
+    ro.mod.version=$(DU_MOD_VERSION) \
