@@ -62,7 +62,7 @@ PRODUCT_COPY_FILES += \
     vendor/du/prebuilt/bin/su:system/xbin/daemonsu \
     vendor/du/prebuilt/bin/su:system/xbin/su \
     vendor/du/prebuilt/etc/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
-    vendor/du/prebuilt/apk/Superuser.apk:system/app/Superuser.apk
+    vendor/du/prebuilt/apk/Superuser.apk:system/app/SuperSU/SuperSU.apk
 
 # HFM Files
 PRODUCT_COPY_FILES += \
