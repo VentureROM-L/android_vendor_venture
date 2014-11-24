@@ -9,15 +9,5 @@
         <item>com.google.android.gms</item>
     </string-array>
 
-    <!-- Package name for default keyguard appwidget [DO NOT TRANSLATE] -->
-    <string name="widget_default_package_name">net.nurik.roman.dashclock</string>
-
-    <!-- Class name for default keyguard appwidget [DO NOT TRANSLATE] -->
-    <string name="widget_default_class_name">com.google.android.apps.dashclock.WidgetProvider</string>
-
     <bool name="config_cellBroadcastAppLinks">true</bool>
-
-      <!-- Set default wifi AP to Dirty Unicorns  -->
-      <string name="wifi_tether_configure_ssid_default" translatable="false">DirtyUnicorns-AP</string>
 </resources>
-

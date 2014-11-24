@@ -1,4 +1,4 @@
-PRODUCT_BRAND ?= du
+PRODUCT_BRAND ?= venture
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -25,63 +25,53 @@ endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/du/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/du/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
-    vendor/du/prebuilt/bin/99-backup.sh:system/addon.d/99-backup.sh \
-    vendor/du/prebuilt/bin/blacklist:system/addon.d/blacklist
+    vendor/venture/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/venture/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/venture/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
+    vendor/venture/prebuilt/bin/99-backup.sh:system/addon.d/99-backup.sh \
+    vendor/venture/prebuilt/bin/blacklist:system/addon.d/blacklist
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/etc/00banner:system/etc/init.d/00banner \
-    vendor/du/prebuilt/bin/sysinit:system/bin/sysinit
+    vendor/venture/prebuilt/etc/00banner:system/etc/init.d/00banner \
+    vendor/venture/prebuilt/bin/sysinit:system/bin/sysinit
 
-# Init script file with DU extras
+# Init script file with VentureROM extras
 PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/etc/init.local.rc:root/init.du.rc
+    vendor/venture/prebuilt/etc/init.local.rc:root/init.venture.rc
 
 # Boot Animation
 PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/venture/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip
 
 # Enable SIP and VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 # Additional packages
--include vendor/du/config/packages.mk
+-include vendor/venture/config/packages.mk
 
 # Versioning
--include vendor/du/config/version.mk
+-include vendor/venture/config/version.mk
 
 # Add our overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/du/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/venture/overlay/common
 
 # SU Support
 PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/bin/su:system/xbin/daemonsu \
-    vendor/du/prebuilt/bin/su:system/xbin/su \
-    vendor/du/prebuilt/etc/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
-    vendor/du/prebuilt/apk/Superuser.apk:system/app/SuperSU/SuperSU.apk
-
-# HFM Files
-PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
-    vendor/du/prebuilt/etc/hosts.og:system/etc/hosts.og
+    vendor/venture/prebuilt/bin/su:system/xbin/daemonsu \
+    vendor/venture/prebuilt/bin/su:system/xbin/su \
+    vendor/venture/prebuilt/etc/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
+    vendor/venture/prebuilt/apk/Superuser.apk:system/app/SuperSU/SuperSU.apk
 
 # Versioning System
 ANDROID_VERSION = 5.0.0
-DU_VERSION = v9.0
+VENTURE_VERSION = 9.0
 
-ifndef DU_BUILD_TYPE
-    DU_BUILD_TYPE := UNOFFICIAL
-    PLATFORM_VERSION_CODENAME := UNOFFICIAL
-endif
-
-DU_VERSION := $(TARGET_PRODUCT)_$(ANDROID_VERSION)_$(shell date -u +%Y%m%d-%H%M).$(DU_VERSION)-$(DU_BUILD_TYPE)
-DU_MOD_VERSION := $(DU_BUILD_TYPE)-v9.0
+VENTURE_VERSION := $(TARGET_PRODUCT)_$(ANDROID_VERSION)_$(shell date -u +%Y%m%d-%H%M).$(VENTURE_VERSION)
+VENTURE_MOD_VERSION := $(VENTURE_VERSION)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
-    ro.du.version=$(DU_VERSION) \
-    ro.mod.version=$(DU_MOD_VERSION) \
+    ro.venture.version=$(VENTURE_VERSION) \
+    ro.mod.version=$(VENTURE_MOD_VERSION) \
