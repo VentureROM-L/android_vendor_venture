@@ -59,10 +59,8 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/venture/overlay/common
 
 # SU Support
 PRODUCT_COPY_FILES += \
-    vendor/venture/prebuilt/bin/su:system/xbin/daemonsu \
-    vendor/venture/prebuilt/bin/su:system/xbin/su \
-    vendor/venture/prebuilt/etc/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
-    vendor/venture/prebuilt/apk/Superuser.apk:system/app/SuperSU/SuperSU.apk
+    vendor/venture/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    vendor/venture/prebuilt/etc/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
 # Versioning System
 ANDROID_VERSION = 5.0
