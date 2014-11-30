@@ -10,6 +10,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	CellBroadcastReceiver
 
+# VentureROM packages
+PRODUCT_PACKAGES += \
+	VentureBox
+
 # Additional tools
 PRODUCT_PACKAGES += \
 	openvpn \
