@@ -23,7 +23,7 @@ OVERLAY_TARGET := venture_xxhdpi
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/venture/configs/telephony.mk)
+$(call inherit-product, vendor/venture/config/telephony.mk)
 
 # Include AOSPA common configuration
 include vendor/venture/main.mk
