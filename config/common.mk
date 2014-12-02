@@ -34,7 +34,8 @@ PRODUCT_COPY_FILES += \
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/venture/prebuilt/etc/00banner:system/etc/init.d/00banner \
-    vendor/venture/prebuilt/bin/sysinit:system/bin/sysinit
+    vendor/venture/prebuilt/bin/sysinit:system/bin/sysinit \
+    vendor/venture/prebuilt/etc/init.d/07venturekernel:system/etc/init.d/07venturekernel
 
 # Init script file with VentureROM extras
 PRODUCT_COPY_FILES += \
