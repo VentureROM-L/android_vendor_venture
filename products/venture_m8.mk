@@ -14,25 +14,25 @@
 
 # Check for target product
 
-ifeq (pa_m8,$(TARGET_PRODUCT))
+ifeq (venture_m8,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xxhdpi
+OVERLAY_TARGET := venture_xxhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/venture/configs/telephony.mk)
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit device configuration
 $(call inherit-product, device/htc/m8/full_m8.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_m8
+PRODUCT_NAME := venture_m8
 PRODUCT_DEVICE := m8
 PRODUCT_BRAND := htc
 PRODUCT_MANUFACTURER := htc
