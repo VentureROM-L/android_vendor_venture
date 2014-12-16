@@ -14,25 +14,25 @@
 
 # Check for target product
 
-ifeq (pa_bacon,$(TARGET_PRODUCT))
+ifeq (venture_bacon,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xxhdpi
+OVERLAY_TARGET := venture_xxhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/venture/configs/telephony.mk)
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit device configuration
 $(call inherit-product, device/oneplus/bacon/full_bacon.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_bacon
+PRODUCT_NAME := venture_bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_BRAND := Oneplus
 PRODUCT_MODEL := A0001
