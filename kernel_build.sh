@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version 2.0.4, Adapted for AOSPA.
+# Version 2.0.4, Adapted for venturerom.
 
 # We don't allow scrollback buffer
 echo -e '\0033\0143'
@@ -77,7 +77,7 @@ fi
 if [ -n "${INTERACTIVE}" ]; then
         echo -e "${bldblu}Dropping to interactive shell${txtrst}"
         echo -en "${bldblu}Remeber to lunch you device:"
-        if [ "${VENDOR}" == "pa" ]; then
+        if [ "${VENDOR}" == "venture" ]; then
                 echo -e "[${bldgrn}lunch venture_$DEVICE-userdebug${bldblu}]${txtrst}"
         else
                 echo -e "[${bldgrn}lunch full_$DEVICE-userdebug${bldblu}]${txtrst}"
@@ -104,8 +104,8 @@ echo -e ""
 res2=$(date +%s.%N)
 echo -e "${bldgrn}Total time elapsed: ${txtrst}${grn}$(echo "($res2 - $res1) / 60"|bc ) minutes ($(echo "$res2 - $res1"|bc ) seconds)${txtrst}"
 
-if [ -f $DIR/out/target/product/$DEVICE/AOSPA-$DEVICE-kernel-signed.zip ]; then
-   mv $DIR/out/target/product/$DEVICE/AOSPA-$DEVICE-kernel-signed.zip $DIR/out/target/product/$DEVICE/AOSPA-$DEVICE-$VERSION-kernel-$DATE-signed.zip
+if [ -f $DIR/out/target/product/$DEVICE/VENTUREROM-$DEVICE-kernel-signed.zip ]; then
+   mv $DIR/out/target/product/$DEVICE/VENTUREROM-$DEVICE-kernel-signed.zip $DIR/out/target/product/$DEVICE/VENTUREROM-$DEVICE-$VERSION-kernel-$DATE-signed.zip
 else
    echo "file does not exist or wrong directory located"
 fi
