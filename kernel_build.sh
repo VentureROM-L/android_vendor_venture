@@ -40,10 +40,10 @@ JVER=$(javac -version  2>&1 | head -n1 | cut -f2 -d' ')
 DEVICE="$1"
 
 # Get build version
-MAJOR=$(cat $DIR/vendor/pa/vendor.mk | grep 'ROM_VERSION_MAJOR := *' | sed  's/ROM_VERSION_MAJOR := //g')
-MINOR=$(cat $DIR/vendor/pa/vendor.mk | grep 'ROM_VERSION_MINOR := *' | sed  's/ROM_VERSION_MINOR := //g')
-MAINTENANCE=$(cat $DIR/vendor/pa/vendor.mk | grep 'ROM_VERSION_MAINTENANCE := *' | sed  's/ROM_VERSION_MAINTENANCE := //g')
-TAG=$(cat $DIR/vendor/pa/vendor.mk | grep 'ROM_VERSION_TAG := *' | sed  's/ROM_VERSION_TAG := //g')
+MAJOR=$(cat $DIR/vendor/venture/vendor.mk | grep 'ROM_VERSION_MAJOR := *' | sed  's/ROM_VERSION_MAJOR := //g')
+MINOR=$(cat $DIR/vendor/venture/vendor.mk | grep 'ROM_VERSION_MINOR := *' | sed  's/ROM_VERSION_MINOR := //g')
+MAINTENANCE=$(cat $DIR/vendor/venture/vendor.mk | grep 'ROM_VERSION_MAINTENANCE := *' | sed  's/ROM_VERSION_MAINTENANCE := //g')
+TAG=$(cat $DIR/vendor/venture/vendor.mk | grep 'ROM_VERSION_TAG := *' | sed  's/ROM_VERSION_TAG := //g')
 
 if [ -n "$TAG" ]; then
         VERSION=$MAJOR.$MINOR$MAINTENANCE-$TAG
@@ -78,7 +78,7 @@ if [ -n "${INTERACTIVE}" ]; then
         echo -e "${bldblu}Dropping to interactive shell${txtrst}"
         echo -en "${bldblu}Remeber to lunch you device:"
         if [ "${VENDOR}" == "pa" ]; then
-                echo -e "[${bldgrn}lunch pa_$DEVICE-userdebug${bldblu}]${txtrst}"
+                echo -e "[${bldgrn}lunch venture_$DEVICE-userdebug${bldblu}]${txtrst}"
         else
                 echo -e "[${bldgrn}lunch full_$DEVICE-userdebug${bldblu}]${txtrst}"
         fi
@@ -93,7 +93,7 @@ else
         # lunch/brunch device
         echo -e "${bldblu}Lunching device [$DEVICE] ${cya}(Includes dependencies sync)${txtrst}"
         export PREFS_FROM_SOURCE
-        lunch "pa_$DEVICE-userdebug";
+        lunch "venture_$DEVICE-userdebug";
 
         echo -e "${bldblu}Starting compilation${txtrst}"
         mka bootzip -j4

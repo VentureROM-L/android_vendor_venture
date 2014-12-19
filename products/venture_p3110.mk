@@ -12,18 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq (pa_p3110,$(TARGET_PRODUCT))
+ifeq (venture_p3110,$(TARGET_PRODUCT))
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/samsung/p3110/full_p3110.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_p3110
+PRODUCT_NAME := venture_p3110
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := GT-P3110
 PRODUCT_MANUFACTURER := samsung

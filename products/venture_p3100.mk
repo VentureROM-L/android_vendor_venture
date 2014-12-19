@@ -1,18 +1,18 @@
-ifeq (pa_p3100,$(TARGET_PRODUCT))
+ifeq (venture_p3100,$(TARGET_PRODUCT))
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/venture/configs/telephony.mk)
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/samsung/p3100/full_p3100.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_p3100
+PRODUCT_NAME := venture_p3100
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := GT-P3100
 PRODUCT_MANUFACTURER := samsung

@@ -13,28 +13,28 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_targa,$(TARGET_PRODUCT))
+ifeq (venture_targa,$(TARGET_PRODUCT))
 
 # Define PA bootanimation size
 PARANOID_BOOTANIMATION_NAME := XHDPI
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := venture_xhdpi
 
 # Build paprefs from source
 PREFS_FROM_SOURCE := false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/venture/configs/telephony.mk)
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit device configuration
 $(call inherit-product, device/motorola/targa/full_targa.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_targa
+PRODUCT_NAME := venture_targa
 PRODUCT_BRAND := verizon
 PRODUCT_DEVICE := targa
 PRODUCT_DEVICE_PREFIX := cdma

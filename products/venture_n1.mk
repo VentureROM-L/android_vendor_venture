@@ -13,28 +13,28 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_n1,$(TARGET_PRODUCT))
+ifeq (venture_n1,$(TARGET_PRODUCT))
 
 # Define PA bootanimation size
 PARANOID_BOOTANIMATION_NAME := XXHDPI
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xxhdpi
+OVERLAY_TARGET := venture_xxhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/venture/configs/telephony.mk)
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/oppo/n1/full_n1.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_n1
+PRODUCT_NAME := venture_n1
 PRODUCT_BRAND := Oppo
 PRODUCT_MODEL := n1
 PRODUCT_MANUFACTURER := Oppo

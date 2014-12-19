@@ -14,26 +14,26 @@
 
 # Check for target product
 
-ifeq (pa_hlte,$(TARGET_PRODUCT))
+ifeq (venture_hlte,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xxhdpi
+OVERLAY_TARGET := venture_xxhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/venture/configs/telephony.mk)
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/hlte/hlte.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := hlte
-PRODUCT_NAME := pa_hlte
+PRODUCT_NAME := venture_hlte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := hlte
 PRODUCT_MANUFACTURER := samsung

@@ -13,25 +13,25 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_umts_spyder,$(TARGET_PRODUCT))
+ifeq (venture_umts_spyder,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := venture_xhdpi
 
 # Build paprefs from source
 PREFS_FROM_SOURCE := false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/venture/configs/telephony.mk)
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit device configuration
 $(call inherit-product, device/motorola/umts_spyder/full_umts_spyder.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_umts_spyder
+PRODUCT_NAME := venture_umts_spyder
 PRODUCT_BRAND := RTGB
 PRODUCT_DEVICE := umts_spyder
 PRODUCT_MODEL := XT910

@@ -13,25 +13,25 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_hercules,$(TARGET_PRODUCT))
+ifeq (venture_hercules,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_hercules
+OVERLAY_TARGET := venture_hercules
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/venture/configs/telephony.mk)
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/samsung/hercules/full_hercules.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_hercules
+PRODUCT_NAME := venture_hercules
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SGH-T989
 PRODUCT_MANUFACTURER := Samsung

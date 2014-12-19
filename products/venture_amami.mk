@@ -13,25 +13,25 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_amami,$(TARGET_PRODUCT))
+ifeq (venture_amami,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := venture_xhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/venture/configs/telephony.mk)
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit device configuration
 $(call inherit-product, device/sony/amami/full_amami.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_amami
+PRODUCT_NAME := venture_amami
 PRODUCT_DEVICE := amami
 PRODUCT_BRAND := sony
 PRODUCT_MANUFACTURER := Sony

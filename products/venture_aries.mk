@@ -13,28 +13,28 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_aries,$(TARGET_PRODUCT))
+ifeq (venture_aries,$(TARGET_PRODUCT))
 
 # Define PA bootanimation size
 PARANOID_BOOTANIMATION_NAME := XHDPI
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := venture_xhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/venture/configs/telephony.mk)
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/xiaomi/aries/full_aries.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_aries
+PRODUCT_NAME := venture_aries
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 2
 PRODUCT_MANUFACTURER := XIAOMI

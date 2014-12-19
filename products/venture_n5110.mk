@@ -13,22 +13,22 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_n5110,$(TARGET_PRODUCT))
+ifeq (venture_n5110,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_tvdpi
+OVERLAY_TARGET := venture_tvdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/n5110/full_n5110.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_n5110
+PRODUCT_NAME := venture_n5110
 PRODUCT_DEVICE := n5110
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
