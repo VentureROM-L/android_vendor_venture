@@ -26,6 +26,7 @@ BOARD_SEPOLICY_UNION += \
     su.te \
     sysinit.te \
     system.te \
+    system_app.te \
     ueventd.te \
     vold.te \
     mac_permissions.xml
