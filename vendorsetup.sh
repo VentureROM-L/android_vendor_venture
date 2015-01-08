@@ -3,6 +3,10 @@ add_lunch_combo venture_aries-userdebug
 add_lunch_combo venture_bacon-userdebug
 add_lunch_combo venture_condor-userdebug
 add_lunch_combo venture_d2lte-userdebug
+add_lunch_combo venture-d2spr-userdebug
+add_lunch_combo venture-d2tmo-userdebug
+add_lunch_combo venture-d2vzw-userdebug
+add_lunch_combo venture-d2att-userdebug
 add_lunch_combo venture_d800-userdebug
 add_lunch_combo venture_d801-userdebug
 add_lunch_combo venture_d802-userdebug
@@ -57,7 +61,3 @@ add_lunch_combo venture_umts_spyder-userdebug
 add_lunch_combo venture_ville-userdebug
 add_lunch_combo venture_vs980-userdebug
 add_lunch_combo venture_yuga-userdebug
-add lunch combo venture-d2spr-userdebug
-add lunch combo venture-d2tmo-userdebug
-add lunch combo venture-d2vzw-userdebug
-add lunch combo venture-d2att-userdebug
