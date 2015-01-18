@@ -12,8 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-
 include vendor/venture/vendor.mk
 include vendor/venture/configs/aosp_fixes.mk
 include vendor/venture/configs/system.mk
@@ -22,4 +20,3 @@ include vendor/venture/configs/bootanimation.mk
 include vendor/venture/configs/version.mk
 include vendor/venture/configs/legacy_extras.mk
 include vendor/venture/configs/themes_common.mk
-#include vendor/venture/sepolicy/sepolicy.mk
