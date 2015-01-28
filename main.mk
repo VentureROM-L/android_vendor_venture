@@ -19,4 +19,3 @@ include vendor/venture/configs/venture_overrides.mk
 include vendor/venture/configs/bootanimation.mk
 include vendor/venture/configs/version.mk
 include vendor/venture/configs/legacy_extras.mk
-include vendor/venture/configs/themes_common.mk

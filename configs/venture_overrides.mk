@@ -12,24 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
- PRODUCT_PACKAGES += \
-    Busybox 
-
-# Source or prebuilt PA-prefs logic
-#ifneq ($(PREFS_FROM_SOURCE),true)
-#    PRODUCT_COPY_FILES += \
-#        vendor/venture/prebuilt/apk/ParanoidPreferences.apk:system/app/ParanoidPreferences.apk
-#else
-#    # Build paprefs from sources
-#    PRODUCT_PACKAGES += \
-#        ParanoidPreferences
-#endif
-
-# Include ParanoidOTA
-#ifneq ($(NO_OTA_BUILD),true)
-#    PRODUCT_PACKAGES += \
-#        ParanoidOTA
-#endif
+PRODUCT_PACKAGES += \
+	AudioFX \
+    Busybox \
+    Eleven \
+    LockClock
 
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
