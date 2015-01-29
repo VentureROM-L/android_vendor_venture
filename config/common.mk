@@ -1,4 +1,3 @@
-
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
@@ -71,20 +70,17 @@ PRODUCT_COPY_FILES += \
 
 # Required packages
 PRODUCT_PACKAGES += \
-    CellBroadcastReceiver \
-    Development \
-    SpareParts
-
-# Optional packages
-PRODUCT_PACKAGES += \
     Basic \
+    CellBroadcastReceiver \
+    BusyBox \
     PhaseBeam
-
-# DSPManager
+    
+# Venture packages
 PRODUCT_PACKAGES += \
-    DSPManager \
-    libcyanogen-dsp \
-    audio_effects.conf
+    AudioFX \
+    Eleven \
+    LockClock
+#   VentureBox
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
@@ -119,12 +115,10 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/venture/overlay/common
 PRODUCT_COPY_FILES += \
     vendor/venture/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 
-# HFM Files
-PRODUCT_COPY_FILES += \
-        vendor/venture/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
-        vendor/venture/prebuilt/etc/hosts.og:system/etc/hosts.og
-
 # SuperSU
 PRODUCT_COPY_FILES += \
     vendor/venture/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
     vendor/venture/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+
+# Inherit common product build prop overrides
+-include vendor/venture/config/common_versions.mk
